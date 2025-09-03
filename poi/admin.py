@@ -4,36 +4,38 @@ from .models import PointOfInterest
 
 @admin.register(PointOfInterest)
 class PointOfInterestAdmin(admin.ModelAdmin):
-    list_display = [
-        'id',  # PoI internal ID
-        'name',  # PoI name
-        'external_id',  # PoI external ID
-        'category',  # PoI category
-        'average_rating',  # Avg. rating
+    """Admin configuration for PointOfInterest."""
+
+    list_display = (
+        'id',              # Internal ID (AutoField PK)
+        'name',            # PoI name
+        'external_id',     # External ID from source
+        'category',        # Category
+        'average_rating',  # Computed avg. rating
         'latitude',
         'longitude',
-        'created_at'
-    ]
-    
-    list_filter = [
-        'category',  # Filter by category
+        'created_at',
+    )
+
+    list_filter = (
+        'category',      # Required filter
         'created_at',
         'source_file',
-    ]
-    
-    search_fields = [
-        'id',  # Search by PoI internal ID
-        'external_id',  # Search by PoI external ID
+    )
+
+    search_fields = (
+        'id__exact',     # Exact search on internal ID
+        'external_id',
         'name',
-    ]
-    
-    readonly_fields = [
+    )
+
+    readonly_fields = (
         'id',
         'average_rating',
         'created_at',
-        'updated_at'
-    ]
-    
+        'updated_at',
+    )
+
     fieldsets = (
         ('Basic Information', {
             'fields': ('external_id', 'name', 'category', 'description')
@@ -46,8 +48,8 @@ class PointOfInterestAdmin(admin.ModelAdmin):
         }),
         ('Metadata', {
             'fields': ('source_file', 'created_at', 'updated_at'),
-            'classes': ('collapse',)
+            'classes': ('collapse',),
         }),
     )
-    
-    ordering = ['-created_at']
+
+    ordering = ('-created_at',)
