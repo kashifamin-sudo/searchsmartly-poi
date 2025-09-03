@@ -51,30 +51,6 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
 
 ---
 
-## 📂 Project Structure
-
-```
-
-searchsmartly-poi-project/
-│
-├── poi/                        # Main app
-│   ├── management/
-│   │   └── commands/
-│   │       └── import\_poi.py   # Import command (CSV, JSON, XML)
-│   ├── migrations/             # Database migrations
-│   ├── models.py               # PointOfInterest model
-│   ├── admin.py                # Admin registration
-│   └── ...
-│
-├── searchsmartly\_project/      # Django project config
-│   ├── settings.py
-│   └── urls.py
-│
-├── requirements.txt
-├── README.md
-└── manage.py
-
-````
 
 ---
 
