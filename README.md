@@ -10,20 +10,20 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
 ---
 
 ## 📖 Table of Contents
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-  - [Importing Data](#importing-data)
-  - [Running the Server](#running-the-server)
-  - [Admin Panel](#admin-panel)
-- [File Specifications](#-file-specifications)
-- [Database Schema](#-database-schema)
-- [Error Handling](#-error-handling)
-- [Assumptions](#-assumptions)
-- [Future Improvements](#-future-improvements)
+- [Features]
+- [Tech Stack]
+- [Project Structure]
+- [Installation]
+- [Configuration]
+- [Usage]
+  - [Importing Data]
+  - [Running the Server]
+  - [Admin Panel]
+- [File Specifications]
+- [Database Schema]
+- [Error Handling]
+- [Assumptions]
+- [Future Improvements]
 
 ---
 
