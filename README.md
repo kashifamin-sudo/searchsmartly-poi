@@ -1,7 +1,7 @@
-
+## SearchSmartly PoI Importer
 
 ```markdown
-# 🗺️ SearchSmartly PoI Importer
+
 
 A Django application that imports **Points of Interest (PoI)** from multiple data formats (**CSV, JSON, XML**) into a relational database and exposes them via the **Django Admin panel** for browsing, searching, and filtering.  
 
