@@ -217,4 +217,3 @@ python manage.py runserver
 
 This project is provided for technical assessment purposes.
 
-```
