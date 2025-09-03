@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+
+# Django / Database
+*.sqlite3
+db.sqlite3
+/media/
+staticfiles/
+*.log
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage / Testing
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# Migrations (optional: if you want them re-generated per environment)
+# Uncomment next line if you don't want to track migration files
+# */migrations/*.py
+# */migrations/*.pyc
+
+# Environment variables
+.env
+*.env
+.env.local
