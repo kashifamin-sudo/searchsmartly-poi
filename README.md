@@ -82,7 +82,7 @@ searchsmartly-poi-project/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/searchsmartly-poi-project.git
+   git clone https://github.com/kashifamin-sudo/searchsmartly-poi.git
    cd searchsmartly-poi-project
 ````
 
@@ -240,11 +240,5 @@ python manage.py runserver
 ## 📜 License
 
 This project is provided for technical assessment purposes.
-You are free to adapt and extend it for personal or professional use.
 
-```
-
----
-
-👉 Do you also want me to **generate a `requirements.txt`** file that matches this project (with Django and standard dependencies), so anyone can run it immediately?
 ```
