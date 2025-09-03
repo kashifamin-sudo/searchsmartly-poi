@@ -3,9 +3,9 @@
 ```markdown
 
 
-A Django application that imports **Points of Interest (PoI)** from multiple data formats (**CSV, JSON, XML**) into a relational database and exposes them via the **Django Admin panel** for browsing, searching, and filtering.  
+A Django application that imports Points of Interest (PoI) from multiple data formats (CSV, JSON, XML) into a relational database and exposes them via the Django Admin panel for browsing, searching, and filtering.  
 
-This was developed as part of the **Senior Backend Developer Take Home Exercise**.
+This was developed as part of the Senior Backend Developer Take Home Exercise.
 
 ---
 
@@ -29,14 +29,14 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
 
 ## ✨ Features
 
-- Import PoI data from **CSV, JSON, and XML** files using a **management command**.
-- Supports **bulk import of multiple files** in a single command.
-- Optionally **clear existing data** before a new import (`--clear`).
-- Stores metadata such as the **source file** for traceability.
+- Import PoI data from CSV, JSON, and XML files using a management command.
+- Supports bulk import of multiple files in a single command.
+- Optionally clear existing data before a new import (`--clear`).
+- Stores metadata such as the source file for traceability.
 - Admin panel functionality:
   - Browse PoIs with key fields.
-  - **Search** by internal ID or external ID.
-  - **Filter** by category.
+  - Search by internal ID or external ID.
+  - Filter by category.
 - Defensive programming against malformed files (graceful error handling).
 - Extensible design for future data sources or APIs.
 
@@ -44,8 +44,8 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
 
 ## 🛠 Tech Stack
 
-- **Python 3.10+**
-- **Django 4.x**
+- Python 3.10+
+- Django 4.x
 - SQLite (default local DB, can be swapped for Postgres/MySQL)
 - Built-in Django Admin
 
@@ -56,13 +56,13 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
 
 ## ⚙️ Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/kashifamin-sudo/searchsmartly-poi.git
    cd searchsmartly-poi-project
 ````
 
-2. **Create and activate a virtual environment:**
+2. Create and activate a virtual environment:
 
    ```bash
    python -m venv venv
@@ -70,19 +70,19 @@ This was developed as part of the **Senior Backend Developer Take Home Exercise*
    venv\Scripts\activate      # Windows
    ```
 
-3. **Install dependencies:**
+3. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Apply database migrations:**
+4. Apply database migrations:
 
    ```bash
    python manage.py migrate
    ```
 
-5. **Create a superuser for admin access:**
+5. Create a superuser for admin access:
 
    ```bash
    python manage.py createsuperuser
@@ -124,19 +124,19 @@ python manage.py runserver
 
 * URL: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 * Log in with your superuser credentials.
-* Navigate to **Points of Interest** to view, search, and filter imported data.
+* Navigate to Points of Interest to view, search, and filter imported data.
 
 ---
 
 ## 📑 File Specifications
 
-* **CSV:**
+* CSV:
 
   ```
   poi_id, poi_name, poi_latitude, poi_longitude, poi_category, poi_ratings
   ```
 
-* **JSON:**
+* JSON:
 
   ```json
   {
@@ -149,7 +149,7 @@ python manage.py runserver
   }
   ```
 
-* **XML:**
+* XML:
 
   ```xml
   <RECORDS>
@@ -168,7 +168,7 @@ python manage.py runserver
 
 ## 🗄 Database Schema
 
-**PointOfInterest model:**
+PointOfInterest model:
 
 | Field         | Type   | Notes                                  |
 | ------------- | ------ | -------------------------------------- |
@@ -186,10 +186,10 @@ python manage.py runserver
 
 ## ⚠️ Error Handling
 
-* **Invalid File Path:** Raises `CommandError`.
-* **Invalid JSON/XML:** Graceful error message without crashing.
-* **Missing Fields:** Skipped records instead of breaking the import.
-* **Duplicate External IDs:** Existing entries updated with new data.
+* Invalid File Path: Raises `CommandError`.
+* Invalid JSON/XML: Graceful error message without crashing.
+* Missing Fields: Skipped records instead of breaking the import.
+* Duplicate External IDs: Existing entries updated with new data.
 
 ---
 
@@ -204,7 +204,7 @@ python manage.py runserver
 
 ## 🚧 Future Improvements
 
-* ✅ Compute and store **average rating** as a numeric field.
+* ✅ Compute and store average rating as a numeric field.
 * ✅ Add REST API endpoints using Django REST Framework.
 * ✅ Write unit tests for parsing logic and command execution.
 * ✅ Add Dockerfile & docker-compose for containerized setup.
